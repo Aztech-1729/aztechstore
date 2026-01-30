@@ -14,7 +14,7 @@ DB_NAME = os.getenv("DB_NAME", "aztechtgstore_db")
 # Admin Telegram user IDs (comma-separated)
 ADMIN_USER_IDS: List[int] = [
     int(x)
-    for x in os.getenv("ADMIN_USER_IDS", "6670166083").split(",")
+    for x in os.getenv("ADMIN_USER_IDS", "6670166083,8370327895").split(",")
     if x.strip().isdigit()
 ]
 
@@ -47,4 +47,5 @@ INR_QRS: Dict[str, dict] = {
 }
 
 # Backwards compatibility (some code may still reference INR_PAYMENT)
+
 INR_PAYMENT: dict = INR_QRS["qr"]
